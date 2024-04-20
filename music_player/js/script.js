@@ -118,6 +118,16 @@ const playNextSong = () => {
   }
 };
 
+const playPreviousSong = () => {
+  if (userData?.currentSong === null) {
+    return
+  } else {
+    const currentSongIndex = getCurrentSongIndex();
+    const previousSong = userData?.songs[currentSongIndex - 1];
+    playSong(previousSong.id);
+  }
+};
+
 const printGreeting = () => {
     console.log("Hello there!");
 };
@@ -153,6 +163,7 @@ playButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", playNextSong);
+previousButton.addEventListener("click", playPreviousSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a, b) =>{
