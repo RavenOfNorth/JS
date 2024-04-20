@@ -108,6 +108,16 @@ const pauseSong = () => {
   pauseButton.addEventListener("click", pauseSong);
 };
 
+const playNextSong = () => {
+  if (userData?.currentSong === null) {
+    playSong(userData?.songs[0].id);
+  } else {
+    const currentSongIndex = getCurrentSongIndex();
+    const nextSong = userData?.songs[currentSongIndex + 1];
+    playSong(nextSong.id);
+  }
+};
+
 const printGreeting = () => {
     console.log("Hello there!");
 };
@@ -141,6 +151,8 @@ playButton.addEventListener("click", () => {
     playSong(userData?.currentSong.id);
   }
 });
+
+nextButton.addEventListener("click", playNextSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a, b) =>{
