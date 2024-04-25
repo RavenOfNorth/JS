@@ -1,8 +1,13 @@
 const getValue = document.getElementById("text-input");
 
+// TODO: connect that funcs to index.html
+
 function isInvalidInputChecker(str) {
-    const regex = /\d+e\d+/i;
-    return str.match(regex);
+    if (str.length < 1) {
+        alert("Please input a value");
+    } else {
+        return;
+    }
 }
 
 function isPolindromeChecker(str) {
@@ -15,4 +20,14 @@ function isPolindromeChecker(str) {
     return str === reversedStr;
 }
 
-console.log(isPolindromeChecker("abbac"));
+function getResult (value) {
+    if (value === true) {
+        console.log(`${getValue} is a palindrome`);
+    } else {
+        console.log(`${getValue} isn't a palindrome`);
+    }
+}
+
+// console.log(isPolindromeChecker("abbac"));
+
+getResult(isPolindromeChecker("abba"));
