@@ -5,28 +5,14 @@ function isInvalidInputChecker(str) {
     return str.match(regex);
 }
 
-// Create Arrays for checking
+function isPolindromeChecker(str) {
 
-function createArrayByString (str) {
-    const valueArray = str.split("");
-    console.log(valueArray);
+    // Take str element to lowercase and delete spaces
+    str = str.toLowerCase().replace(/\s/g, '');
+
+    // Reverse str element
+    const reversedStr = str.split("").reverse().join('');
+    return str === reversedStr;
 }
 
-function createArrayByStringReverse (str) {
-    const valueArrayReverse = str.split("").reverse();
-    console.log(valueArrayReverse);
-}
-
-/*
-    if (getValueArray === getValueArrayReverse) {
-        const result = `${getValue} is polindrome!`;
-        return result;
-    } else {
-        const result = `${getValue} isn't polindrome!`;
-        return result;
-    }
-*/
-
-// console.log(isPalindromeChecker("abba"));
-createArrayByString("abba");
-createArrayByStringReverse("sukablyat");
+console.log(isPolindromeChecker("abbac"));
