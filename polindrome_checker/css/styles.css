@@ -25,10 +25,5 @@ h1 {
     width: 50%;
     text-align: center;
     margin: 30px auto;
-    vertical-align:middle; /* TODO: Solve the problem here
-}
-
-#text-input {
-    height: 15px; /* TODO DELETE IT
-    width: 50%;
+    vertical-align:middle;
 }
