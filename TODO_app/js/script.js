@@ -120,6 +120,8 @@ taskForm.addEventListener("submit", (e) => {
 
 localStorage.setItem("data", JSON.stringify(myTaskArr));
 
+//Some test with local storage:
+
 const getTaskArr = localStorage.getItem("data");
 
 console.log(getTaskArr);
