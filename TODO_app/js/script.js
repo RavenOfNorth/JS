@@ -29,6 +29,8 @@ const addOrUpdateTask = () => {
     reset();
 };
 
+
+// Update TODO list:
 const updateTaskContainer = () => {
     tasksContainer.innerHTML = '';
     taskData.forEach(({id, title, date, description}) => {
@@ -37,13 +39,38 @@ const updateTaskContainer = () => {
           <p><strong>Title:</strong> ${title}</p>
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
-          <button type="button" class="btn">Edit</button>
-          <button type="button" class="btn">Delete</button>
+          <button type="button" class="btn" onclick="editTask(this)">Edit</button>
+          <button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
         </div>
       `)
     }
   );
 };
+
+// Delete item from TODO list:
+const deleteTask = (buttonEl) => {
+  const dataArrIndex = taskData.findIndex((item) => 
+    item.id === buttonEl.parentElement.id
+  );
+  buttonEl.parentElement.remove();
+  taskData.splice(dataArrIndex, 1);
+};
+
+//Edit task in TODO list:
+const editTask = (buttonEl) => {
+  const dataArrIndex = taskData.findIndex((item) =>
+    item.id === buttonEl.parentElement.id
+  );
+
+  currentTask = taskData[dataArrIndex];
+
+  titleInput.value = currentTask.title;
+  dateInput.value = currentTask.date;
+  descriptionInput.value = currentTask.description;
+
+  addOrUpdateTaskBtn.innerText = "Update Task";
+
+}; 
 
 const reset = () => {
     titleInput.value = '';
