@@ -2,6 +2,21 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+//TODO Continue to update decimalToBinary func with recursion
+
+const countDownAndUp = (number) =>{
+    console.log(number);
+    
+    if (number === 0) {
+        return
+    } else {
+        countDownAndUp(number - 1);
+    };
+};
+
+// TODO delete it later!!!
+countDownAndUp(3);
+
 function decimalToBinary(input) {
     let binary = "";
     result.innerText = binary;
