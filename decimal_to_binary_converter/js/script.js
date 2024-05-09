@@ -2,8 +2,17 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+function decimalToBinary(input) {
+
+};
+
 function checkUserInput() {
-    console.log(numberInput.value);
+    if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
+        window.alert("Please provide a decimal number");
+        return
+    }
+    decimalToBinary(parseInt(numberInput.value));
+    numberInput.value = '';
 };
 
 // add event's leasteners here:
