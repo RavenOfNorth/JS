@@ -4,31 +4,12 @@ const result = document.getElementById("result");
 
 //TODO Continue to update decimalToBinary func with recursion
 
-const countDownAndUp = (number) =>{
-    console.log(number);
-    
-    if (number === 0) {
-        return
-    } else {
-        countDownAndUp(number - 1);
-    };
-};
-
-// TODO delete it later!!!
-countDownAndUp(3);
-
 function decimalToBinary(input) {
-    let binary = "";
-    result.innerText = binary;
-
     if (input === 0) {
-        binary = "0";
+        return "";
+    } else {
+        return decimalToBinary(Math.floor(input / 2));
     }
-
-    while (input > 0) {
-        input = Math.floor(input / 2);
-        binary = (input % 2) + binary;
-    };
 };
 
 function checkUserInput() {
