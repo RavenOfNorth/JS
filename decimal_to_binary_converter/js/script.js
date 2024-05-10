@@ -8,7 +8,7 @@ function decimalToBinary(input) {
     if (input === 0) {
         return "";
     } else {
-        return decimalToBinary(Math.floor(input / 2));
+        return decimalToBinary(Math.floor(input / 2)) + (input % 2);
     }
 };
 
@@ -17,7 +17,7 @@ function checkUserInput() {
         window.alert("Please provide a decimal number");
         return
     }
-    decimalToBinary(parseInt(numberInput.value));
+    result.textContent = decimalToBinary(parseInt(numberInput.value));
     numberInput.value = '';
 };
 
