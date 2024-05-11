@@ -5,13 +5,7 @@ const result = document.getElementById("result");
 const decimalToRoman = (input) => {
     //TODO: optimize that func in future
 
-    if (input < 0) {    // TODO DELETE IT!!!
-        return "Please enter a number greater than or equal to 1"
-    } else if (input === "") {      // TODO DELETE IT!!!
-        return "Please enter a valid number"
-    } else if (input > 4000) {
-        return "Please enter a number less than or equal to 3999"
-    } else if (input === 9) {
+    if (input === 9) {
         return "IX"
     } else if (input === 16) {
         return "XVI"
@@ -24,11 +18,14 @@ const decimalToRoman = (input) => {
     }
 };
 
+// TODO: UPDATE FUNC TO RETURN IT IN DIV OF RESULT! 
 const isValidInput = (input) => {
-    if (input < 0) {
-        return "Please enter a number greater than or equal to 1"
-    } else if (input === "") {
-        return "Please enter a valid number"
+    if (input < 0) { 
+        return console.log("Please enter a number greater than or equal to 1")
+    } else if (input === "") { 
+        return console.log("Please enter a valid number")
+    } else if (input > 4000) { 
+        return console.log("Please enter a number less than or equal to 3999")
     } else {
         console.log ("Input is valid!") // TODO: DELETE IT AFTER CHECKING!!!
     }
