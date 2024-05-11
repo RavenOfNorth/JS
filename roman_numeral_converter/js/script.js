@@ -4,7 +4,8 @@ const result = document.getElementById("result");
 
 const decimalToRoman = (input) => {
     //TODO: optimize that func in future
-
+    // TODO: UPDATE FUNC TO RETURN IT IN DIV OF RESULT! 
+    
     if (input === 9) {
         return "IX"
     } else if (input === 16) {
@@ -20,7 +21,6 @@ const decimalToRoman = (input) => {
     };
 };
 
-// TODO: UPDATE FUNC TO RETURN IT IN DIV OF RESULT! 
 const isValidInput = (input) => {
     if (input < 0) { 
         return console.log("Please enter a number greater than or equal to 1")
