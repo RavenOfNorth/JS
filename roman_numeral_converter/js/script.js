@@ -18,3 +18,16 @@ RomanNums.set(400, "CD");
 RomanNums.set(500, "D");
 RomanNums.set(900, "CM");
 RomanNums.set(1000, "M");
+
+const isValidInput = () => {
+    const inputInt = parseInt(numberInput);
+    if (inputInt < 0) { 
+        result.textContent = "Please enter a number greater than or equal to 1"
+    } else if (inputInt === "") { 
+        result.textContent = "Please enter a valid number"
+    } else if (inputInt > 4000) { 
+        result.textContent = "Please enter a number less than or equal to 3999"
+    } else {
+        console.log ("Input is valid!") // TODO: DELETE IT AFTER CHECKING!!!
+    }
+}
