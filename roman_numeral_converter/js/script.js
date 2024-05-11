@@ -15,7 +15,9 @@ const decimalToRoman = (input) => {
         return "MXXIII"
     } else if (input === 3999) {
         return "MMMCMXCIX"
-    }
+    } else {
+        //TODO: HERE SHOULD BE FUNC TO CONVERT
+    };
 };
 
 // TODO: UPDATE FUNC TO RETURN IT IN DIV OF RESULT! 
