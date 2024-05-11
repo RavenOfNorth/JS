@@ -2,33 +2,19 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-const decimalToRoman = (input) => {
-    //TODO: optimize that func in future
-    // TODO: UPDATE FUNC TO RETURN IT IN DIV OF RESULT! 
-    
-    if (input === 9) {
-        return "IX"
-    } else if (input === 16) {
-        return "XVI"
-    } else if (input === 649) {
-        return "DCXLIX"
-    } else if (input === 1023) {
-        return "MXXIII"
-    } else if (input === 3999) {
-        return "MMMCMXCIX"
-    } else {
-        //TODO: HERE SHOULD BE FUNC TO CONVERT
-    };
-};
-
-const isValidInput = (input) => {
-    if (input < 0) { 
-        return console.log("Please enter a number greater than or equal to 1")
-    } else if (input === "") { 
-        return console.log("Please enter a valid number")
-    } else if (input > 4000) { 
-        return console.log("Please enter a number less than or equal to 3999")
-    } else {
-        console.log ("Input is valid!") // TODO: DELETE IT AFTER CHECKING!!!
-    }
-}
+// Create new Map
+const RomanNums =  new Map();
+RomanNums.set(1, "I");
+RomanNums.set(4, "IV");
+RomanNums.set(5, "V");
+RomanNums.set(6, "VI");
+RomanNums.set(9, "IX");
+RomanNums.set(10, "X");
+RomanNums.set(40, "XL");
+RomanNums.set(50, "L");
+RomanNums.set(90, "XC");
+RomanNums.set(100, "C");
+RomanNums.set(400, "CD");
+RomanNums.set(500, "D");
+RomanNums.set(900, "CM");
+RomanNums.set(1000, "M");
