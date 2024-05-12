@@ -1,25 +1,27 @@
-const inputNumber = document.getElementById("number-input").value;
-const converterBtn = document.getElementById("converter-btn");
-const result = document.getElementById("result");
+// It's work! :D
 
-const isValidInput = () => {
+const converterBtn = document.getElementById("convert-btn");
+const result = document.getElementById("output");
 
-    if (inputInt === '') {
+function isValidInput() {
+    const inputNumber = document.getElementById("number-input").value;
+
+    if (inputNumber === '') {
         result.textContent = 'Please enter a valid number';
     } else {
         const inputInt = parseInt(inputNumber);
 
         if (inputInt === -1) {
             result.textContent = 'Please enter a number greater than or equal to 1';
-        } else if (number >= 4000) {
+        } else if (inputInt >= 4000) {
             result.textContent = 'Please enter a number less than or equal to 3999';
         } else {
-            return // TODO update it later!
+            const romanNum = convertDecimalToRoman(inputInt);
+            result.textContent = romanNum;
         }
     }
 };
-
-const convertDecimalToRoman = (num) => {
+function convertDecimalToRoman(num) {
     const romanNums = {
         M: 1000,
         CM: 900,
@@ -47,3 +49,5 @@ const convertDecimalToRoman = (num) => {
 
     return convert_result;
 }
+
+converterBtn.addEventListener("click", isValidInput);
