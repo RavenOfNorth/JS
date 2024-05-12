@@ -4,7 +4,8 @@ const converterBtn = document.getElementById("convert-btn");
 const result = document.getElementById("output");
 
 function isValidInput() {
-    const inputNumber = document.getElementById("number-input").value;
+    result.style.border = "2px solid white"; /* TODO: delete it in the end */
+    const inputNumber = document.getElementById("number").value;
 
     if (inputNumber === '') {
         result.textContent = 'Please enter a valid number';

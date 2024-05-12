@@ -1,3 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-grey: #f5f6f7;
+  --dark-blue: #1b1b32;
+  --orange: #f1be32;
+}
+
 body {
     background-color: rgb(36, 10, 61);
 }
@@ -15,11 +29,14 @@ body {
 }
 
 .container {
+    border: 2px solid white; /* TODO: delete it in the end */
+}
+
+.container, #output {
     width: 30%;
     height: 30%;
-    margin: auto;
+    margin: 2em auto;
     background-color: rgb(94, 73, 114);
-    border: 2px solid white; /* TODO: delete it in the end */
 }
 
 .converter-container {
@@ -29,7 +46,6 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    border: 2px solid rgb(201, 6, 6);   /* TODO: delete it in the end */
 }
 
 .container>h1 {
@@ -52,20 +68,35 @@ body {
     margin-top: 10px; 
     margin-bottom: 10px;
     max-width: 600px;
-    width: 500px;
-    height: 48px;
+    height: 20%;
+    width: 95%;
     background-color: rgb(24, 7, 41);
     color: aliceblue;
     font-size: 48px;
 }
 
 .convert-btn {
-    height: 50px;
-    width: 300px;
-    background-color: rgb(139, 126, 10);
-    font-size: 23px;
+    height: 20%;
+    width: 95%;
+    background-image: linear-gradient(#fecc4c, #ffac33);
     font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
+    color: rgb(15, 15, 15);
     margin-bottom: 20px;
-    border: 2px solid black;
+    border: 3px solid #feac32;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    padding: 4px;
+}
+
+#output {
+    font: 2.5em sans-serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+    .input-container {
+    flex-direction: row;
+    }
 }
