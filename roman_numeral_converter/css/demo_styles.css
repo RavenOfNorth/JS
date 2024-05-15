@@ -1,0 +1,16 @@
+.converter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.number-input {
+    margin-bottom: 10px;
+}
+
+#output {
+    margin-top: 10px;
+    font-weight: bold;
+    color: red;
+}

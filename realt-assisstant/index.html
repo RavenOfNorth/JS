@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Real Estate Assistant</title>
+</head>
+<body>
+	<header>
+		<div class="header-menu" id="header-menu">
+			<ul id="header-inline-menu">
+				<li><a href="#">MyFin</a></li>
+			</ul>
+		</div>
+	</header>
+	<form class="container">
+		<div class="calculator">
+			<fieldset id="common-info"> Данные для расчётов:
+				<ul>
+					<li>
+						<label for="square">Введите общую площадь квартиры (кв.м):</label>
+						<input class="input-value" id="square" name="square" required>
+					</li>
+					<li>
+						<label for="cost-dollar">Введите стоимость квартиры в $:</label>
+						<input class="input-value" id="cost-dollar" name="cost-dollar" required>
+					</li>
+					<li>
+						<label for="nbrb-dollar">Введите курс доллара с Myfin (ссылка в шапке):</label>
+						<input class="input-value" id="nbrb-dollar" name="nbrb-dollar" required>
+					</li>
+				</ul>
+				<button id="calculator-btn" type="submit">Рассчитать</button>
+			</fieldset>
+		</div>
+		<fieldset id="result-block">Результаты расчётов:
+			<ul>
+				<li>
+					<label for="square-cost">Стоимость 1 кв.м.:</label>
+					<p id="square-cost"></p>
+				</li>
+				<li>
+					<label for="percent-from-trade">Процент от сделки (%):</label>
+					<p id="percent-from-trade"></p>
+				</li>
+				<li>
+					<label for="percent-from-trade-money">Доля агенства:</label>
+					<p id="percent-from-trade-money"></p>
+				</li>
+				<li>
+					<label for="amount">Деньги покупателя:</label>
+					<p id="amount"></p>
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
